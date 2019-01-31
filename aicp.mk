@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
+# Custom Build ID
+TARGET_UNOFFICIAL_BUILD_ID := aoleary
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from the common Open Source product configuration

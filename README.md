@@ -39,29 +39,6 @@ Prepare the android sources like written in the [official TWRP guide](http://for
 
 Android branch to use: https://github.com/omnirom/android/tree/android-9.0
 
-Create `.repo/local_manifests/g4.xml`:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <project name="android_external_busybox" path="external/busybox" remote="omnirom" revision="android-8.1" />
-</manifest>
-```
-
-Run `repo sync -jX` to check it out.
-
-### Build
-
-If you want to include/build a new kernel (optional) skip to the next topic. 
-If you want to use the included kernel in this device tree proceed.
-
-```sh
-source build/envsetup.sh
-lunch omni_g4-eng
-mka recoveryimage
-```
-(the lunch command may install additional ressources)
-
 ### TWRP kernel
 
 Create `.repo/local_manifests/g4_kernel.xml`:
@@ -75,3 +52,14 @@ Create `.repo/local_manifests/g4_kernel.xml`:
 Then run `repo sync -jX kernel/lge/g4` to check it out.
 
 The kernel will be build automatically together with TWRP.
+
+### Build
+
+```sh
+source build/envsetup.sh
+lunch omni_g4-eng
+mka recoveryimage
+```
+(the lunch command may install additional ressources)
+
+

@@ -44,3 +44,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 PRODUCT_COPY_FILES += \
     system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
+#tmp workaround on pie builds until I have the time to fix adb crashes
+PRODUCT_COPY_FILES += \
+    device/lge/g4/adbd:recovery/root/sbin/adbd_o
+

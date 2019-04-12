@@ -7,6 +7,7 @@ import /init.recovery.prepdecrypt.rc
 service createsym /sbin/sh /sbin/createsym.sh
     oneshot
     disabled
+    seclabel u:r:recovery:s0
 
 # steadfasterX: fix time in TWRP (read timekeep value from ROM)
 service getadjust /sbin/sh /sbin/readtimeprop.sh

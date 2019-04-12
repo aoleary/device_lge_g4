@@ -98,8 +98,11 @@ BOARD_SEPOLICY_DIRS += device/lge/g4/sepolicy
 TW_BACKUP_INCLUDE_DATA_MEDIA := true
 
 # DEBUG (BOTH needed to enable logcat)
-#TWRP_INCLUDE_LOGCAT := true
-#TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+# Use toybox as busybox failing to build
+TW_USE_TOOLBOX := true
 
 # Unify all g4 models
 TARGET_UNIFIED_DEVICE := true

@@ -40,3 +40,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.build.product \
     ro.product.name \
     ro.product.device
+
+PRODUCT_COPY_FILES += \
+    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+

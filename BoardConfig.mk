@@ -30,7 +30,6 @@ BOARD_KERNEL_CMDLINE := maxcpus console=ttyHSL0,115200,n8 androidboot.console=tt
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x0000000 --ramdisk_offset 0x02200000 --tags_offset 0x00000100
-#TARGET_PREBUILT_KERNEL := device/lge/g4/Image.gz-dtb
 
 # Kernel build
 BOARD_KERNEL_SEPARATED_DT := true

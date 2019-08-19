@@ -2,7 +2,7 @@
 # workaround script by steadfasterX to ensure time is correct
 
 LOG=/tmp/recovery.log
-DEBUG=0
+DEBUG=1
 QCOMTIMED=time_daemon
 SONYTIMED=timekeep
 TMPSYS=/tempsys
@@ -35,11 +35,12 @@ F_LOG "/system found in twrp fstab: >$(grep '/system' /etc/fstab)<"
 
 # identify ROM type
 F_LOG "system mount:"
-mkdir $TMPSYS
-mount -t ext4 /dev/block/bootdevice/by-name/system $TMPSYS 2>&1 >> $LOG || mount -t f2fs /dev/block/bootdevice/by-name/system $TMPSYS 2>&1 >> $LOG
-F_LOG "$(mount | grep \"$TMPSYS\" )"
-F_LOG "$(ls -la $TMPSYS/build.prop)"
+mkdir $TMPSYS 2>&1 >> $LOG
+F_LOG "mountpoint dir: $(ls -la / |grep $TMPSYS)"
+mount -t ext4 /dev/block/bootdevice/by-name/system $TMPSYS 2>&1 >> $LOG || mount -t f2fs /dev/block/bootdevice/by-name/system $TMPSYS >> $LOG 2>&1
+F_LOG "$TMPSYS mount state: $(mount | grep \"$TMPSYS\" )"
 [ ! -r $TMPSYS/build.prop ] && F_ELOG "cannot determine installed OS! time will may not work properly.. falling back to qcomtime.."
+F_LOG "$TMPSYS prop: $(ls -la $TMPSYS/build.prop)"
 [ $DEBUG -eq 1 ] && [ -r $TMPSYS/build.prop ] && F_LOG "your build entries in yours ROM build.prop: $(grep build $TMPSYS/build.prop)"
 
 unset ROMTYPE
@@ -111,10 +112,10 @@ else
         fi
     else
         # when coming from STOCK those are obsolete!
-        [ -f /data/time/ats_1 ]&& rm /data/time/ats_* && F_LOG "atsa1: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/time/ats_*"
-        [ -f /data/time/ats_2 ]&& rm /data/time/ats_* && F_LOG "atsa2: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/time/ats_*"
-        [ -f /data/system/time/ats_1 ] && rm /data/system/time/ats_* && F_LOG "atsb1: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/system/time/ats_*"
-        [ -f /data/system/time/ats_2 ] && rm /data/system/time/ats_* && F_LOG "atsb2: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/system/time/ats_*"
+        [ ! -z $SYSPROP ]&&[ -f /data/time/ats_1 ]&& rm /data/time/ats_* && F_LOG "atsa1: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/time/ats_*"
+        [ ! -z $SYSPROP ]&&[ -f /data/time/ats_2 ]&& rm /data/time/ats_* && F_LOG "atsa2: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/time/ats_*"
+        [ ! -z $SYSPROP ]&&[ -f /data/system/time/ats_1 ] && rm /data/system/time/ats_* && F_LOG "atsb1: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/system/time/ats_*"
+        [ ! -z $SYSPROP ]&&[ -f /data/system/time/ats_2 ] && rm /data/system/time/ats_* && F_LOG "atsb2: We are on a $ROMTYPE ROM so deleted unneeded qcomtime ROM file: /data/system/time/ats_*"
         
         if [ -r /data/property/persist.sys.timeadjust ];then
             setprop persist.sys.timeadjust $(cat /data/property/persist.sys.timeadjust)

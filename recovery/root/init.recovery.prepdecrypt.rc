@@ -18,7 +18,7 @@ service hwservicemanager /sbin/hwservicemanager
 
 on init
     # decrypt stuff (triggers crypto.ready)
-    start prepdecrypt
+    # start prepdecrypt
 
 # we need that manifest to find keymaster-3 but it disappears
 # on vold decrypt due to a symlink process happening there

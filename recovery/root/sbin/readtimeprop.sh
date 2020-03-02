@@ -7,6 +7,8 @@ QCOMTIMED=time_daemon
 SONYTIMED=timekeep
 TMPSYS=/tempsys
 
+TD_LIBS="libdiag.so libdsutils.so libidl.so libmdmdetect.so libqmi_cci.so  libqmi_client_qmux.so libqmi_common_so.so libqmi_encdec.so libqmiservices.so libsmemlog.so"
+
 F_LOG(){
    MSG="$1"
    echo "I:$TAG: $(date +%F_%T) - $MSG" >> $LOG
@@ -14,6 +16,10 @@ F_LOG(){
 F_ELOG(){
    MSG="$1"
    echo "E:$TAG: $(date +%F_%T) - $MSG" >> $LOG
+}
+
+F_STOPTD(){
+    stop time_daemon
 }
 
 TAG="READTIME"
@@ -40,7 +46,7 @@ F_LOG "trying to identify the ROM .."
 mount | grep -q "/system"
 TMPMNTNEED=$?
 if [ $TMPMNTNEED -ne 0 ];then
-    mkdir $TMPSYS
+    [ ! -d $TMPSYS ] && mkdir $TMPSYS
     TMPMNTHERE=0
     while [ "$TMPMNTHERE" -eq 0 ];do
         F_LOG "trying to activate temp mount..."
@@ -63,6 +69,7 @@ F_LOG "$(ls -la $TMPSYS/build.prop)"
 [ $DEBUG -eq 1 ] && [ -r $TMPSYS/build.prop ] && F_LOG "your build entries in yours ROM build.prop: $(grep build $TMPSYS/build.prop)"
 
 unset ROMTYPE
+# search for known binaries to identify which one is in use by that ROM
 find $TMPSYS -name $QCOMTIMED | grep $QCOMTIMED 2>&1 >> $LOG && ROMTYPE=qcomtime
 find $TMPSYS -name $SONYTIMED | grep $SONYTIMED 2>&1 >> $LOG && ROMTYPE=sony
 
@@ -72,6 +79,14 @@ if [ $? -eq 0 ];then PROPTYPE=sony; else PROPTYPE=qcomtime; fi
 
 # fallback if the regular detection fails
 [ -z $QCOMTIMED ] && [ -z $SONYTIMED ] && ROMTYPE=$PROPTYPE && F_ELOG "binary detection failed! using fallback.."
+
+if [ "$ROMTYPE" == "qcomtime" ];then
+    F_LOG "QCOM proprietary libs will be pulled now:"
+    for lib in $TD_LIBS;do
+        cp $TMPSYS/vendor/lib64/$lib /sbin/ >> $LOG 2>&1
+        F_LOG " ... copying $lib to /sbin ended with $?"
+    done
+fi
 
 F_LOG "system umount:"
 if [ "$SYSMNTED" -eq 0 ];then
@@ -129,6 +144,8 @@ else
             F_LOG "proprietary qcom time-file detected! Will start qcom time_daemon instead of timekeep!"
             # trigger time_daemon
             setprop twrp.timedaemon 1
+            sleep 1
+            F_STOPTD
         else
             F_ELOG "We expected $ROMTYPE ROM but proprietary qcom time files missing! Cannot set time!"
             F_ELOG "$(find /data/time/ /data/system/time/ 2>&1)"

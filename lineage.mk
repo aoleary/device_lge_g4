@@ -31,3 +31,5 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_DISPLAY_ID="AOSiP"

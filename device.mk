@@ -47,5 +47,11 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # common g4
 $(call inherit-product, device/lge/g4-common/g4.mk)

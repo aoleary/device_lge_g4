@@ -14,27 +14,27 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/aosip.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_h811
-PRODUCT_DEVICE := h811
+PRODUCT_DEVICE := h810_usu
+PRODUCT_NAME := aosip_h810_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-H811
+PRODUCT_MODEL := LG-H810
 PRODUCT_MANUFACTURER := LGE
 
-CLEAN_MODEL := $(PRODUCT_DEVICE)
+CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
-    PRODUCT_NAME="p1_tmo_us" \
-    PRIVATE_BUILD_DESC="p1_tmo_us-user 6.0 MRA58K 1731216298e5b release-keys"
+    PRODUCT_NAME="p1_global_com" \
+    PRIVATE_BUILD_DESC="p1_att_us-user 6.0 MRA58K 1617209012672 release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_tmo_us/p1:6.0/MRA58K/1731216298e5b:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_att_us/p1:6.0/MRA58K/1617209012672:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
@@ -45,4 +45,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1
 
-DEBUG_ME += lineage_h811.mk
+DEBUG_ME += aosip_h810_usu.mk

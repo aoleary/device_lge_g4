@@ -20,42 +20,42 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/lineage_f500_usu.mk \
-	$(LOCAL_DIR)/lineage_h810_usu.mk \
-	$(LOCAL_DIR)/lineage_h811.mk \
-	$(LOCAL_DIR)/lineage_h812_usu.mk \
-	$(LOCAL_DIR)/lineage_h815.mk \
-	$(LOCAL_DIR)/lineage_h815_usu.mk \
-	$(LOCAL_DIR)/lineage_ls991_usu.mk \
-	$(LOCAL_DIR)/lineage_us991_usu.mk \
-	$(LOCAL_DIR)/lineage_vs986_usu.mk
+	$(LOCAL_DIR)/xtended_f500_usu.mk \
+	$(LOCAL_DIR)/xtended_h810_usu.mk \
+	$(LOCAL_DIR)/xtended_h811.mk \
+	$(LOCAL_DIR)/xtended_h812_usu.mk \
+	$(LOCAL_DIR)/xtended_h815.mk \
+	$(LOCAL_DIR)/xtended_h815_usu.mk \
+	$(LOCAL_DIR)/xtended_ls991_usu.mk \
+	$(LOCAL_DIR)/xtended_us991_usu.mk \
+	$(LOCAL_DIR)/xtended_vs986_usu.mk
 
 COMMON_LUNCH_CHOICES := \
-	lineage_f500_usu-userdebug \
-	lineage_f500_usu-user \
-	lineage_f500_usu-eng \
-	lineage_h810_usu-userdebug \
-	lineage_h810_usu-user \
-	lineage_h810_usu-eng \
-	lineage_h811-userdebug \
-	lineage_h811-user \
-	lineage_h811-eng \
-	lineage_h812_usu-userdebug \
-	lineage_h812_usu-user \
-	lineage_h812_usu-eng \
-	lineage_h815-userdebug \
-	lineage_h815-user \
-	lineage_h815-eng \
-	lineage_h815_usu-userdebug \
-	lineage_h815_usu-user \
-	lineage_h815_usu-eng \
-	lineage_ls991_usu-userdebug \
-	lineage_ls991_usu-user \
-	lineage_ls991_usu-eng \
-	lineage_us991_usu-userdebug \
-	lineage_us991_usu-user \
-	lineage_us991_usu-eng \
-	lineage_vs986_usu-userdebug \
-	lineage_vs986_usu-user \
-	lineage_vs986_usu-eng
+	xtended_f500_usu-userdebug \
+	xtended_f500_usu-user \
+	xtended_f500_usu-eng \
+	xtended_h810_usu-userdebug \
+	xtended_h810_usu-user \
+	xtended_h810_usu-eng \
+	xtended_h811-userdebug \
+	xtended_h811-user \
+	xtended_h811-eng \
+	xtended_h812_usu-userdebug \
+	xtended_h812_usu-user \
+	xtended_h812_usu-eng \
+	xtended_h815-userdebug \
+	xtended_h815-user \
+	xtended_h815-eng \
+	xtended_h815_usu-userdebug \
+	xtended_h815_usu-user \
+	xtended_h815_usu-eng \
+	xtended_ls991_usu-userdebug \
+	xtended_ls991_usu-user \
+	xtended_ls991_usu-eng \
+	xtended_us991_usu-userdebug \
+	xtended_us991_usu-user \
+	xtended_us991_usu-eng \
+	xtended_vs986_usu-userdebug \
+	xtended_vs986_usu-user \
+	xtended_vs986_usu-eng
 

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/xtended.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := us991_usu
-PRODUCT_NAME := lineage_us991_usu
+PRODUCT_NAME := xtended_us991_usu
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LGUS991
 PRODUCT_MANUFACTURER := LGE
@@ -44,4 +44,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=8 \
     telephony.lteOnCdmaDevice=1
 
-DEBUG_ME += lineage_us991_usu.mk
+DEBUG_ME += xtended_us991_usu.mk

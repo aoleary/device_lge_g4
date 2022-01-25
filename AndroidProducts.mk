@@ -20,42 +20,42 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/lineage_f500_usu.mk \
-	$(LOCAL_DIR)/lineage_h810_usu.mk \
-	$(LOCAL_DIR)/lineage_h811.mk \
-	$(LOCAL_DIR)/lineage_h812_usu.mk \
-	$(LOCAL_DIR)/lineage_h815.mk \
-	$(LOCAL_DIR)/lineage_h815_usu.mk \
-	$(LOCAL_DIR)/lineage_ls991_usu.mk \
-	$(LOCAL_DIR)/lineage_us991_usu.mk \
-	$(LOCAL_DIR)/lineage_vs986_usu.mk
+	$(LOCAL_DIR)/havoc_f500_usu.mk \
+	$(LOCAL_DIR)/havoc_h810_usu.mk \
+	$(LOCAL_DIR)/havoc_h811.mk \
+	$(LOCAL_DIR)/havoc_h812_usu.mk \
+	$(LOCAL_DIR)/havoc_h815.mk \
+	$(LOCAL_DIR)/havoc_h815_usu.mk \
+	$(LOCAL_DIR)/havoc_ls991_usu.mk \
+	$(LOCAL_DIR)/havoc_us991_usu.mk \
+	$(LOCAL_DIR)/havoc_vs986_usu.mk
 
 COMMON_LUNCH_CHOICES := \
-	lineage_f500_usu-userdebug \
-	lineage_f500_usu-user \
-	lineage_f500_usu-eng \
-	lineage_h810_usu-userdebug \
-	lineage_h810_usu-user \
-	lineage_h810_usu-eng \
-	lineage_h811-userdebug \
-	lineage_h811-user \
-	lineage_h811-eng \
-	lineage_h812_usu-userdebug \
-	lineage_h812_usu-user \
-	lineage_h812_usu-eng \
-	lineage_h815-userdebug \
-	lineage_h815-user \
-	lineage_h815-eng \
-	lineage_h815_usu-userdebug \
-	lineage_h815_usu-user \
-	lineage_h815_usu-eng \
-	lineage_ls991_usu-userdebug \
-	lineage_ls991_usu-user \
-	lineage_ls991_usu-eng \
-	lineage_us991_usu-userdebug \
-	lineage_us991_usu-user \
-	lineage_us991_usu-eng \
-	lineage_vs986_usu-userdebug \
-	lineage_vs986_usu-user \
-	lineage_vs986_usu-eng
+	havoc_f500_usu-userdebug \
+	havoc_f500_usu-user \
+	havoc_f500_usu-eng \
+	havoc_h810_usu-userdebug \
+	havoc_h810_usu-user \
+	havoc_h810_usu-eng \
+	havoc_h811-userdebug \
+	havoc_h811-user \
+	havoc_h811-eng \
+	havoc_h812_usu-userdebug \
+	havoc_h812_usu-user \
+	havoc_h812_usu-eng \
+	havoc_h815-userdebug \
+	havoc_h815-user \
+	havoc_h815-eng \
+	havoc_h815_usu-userdebug \
+	havoc_h815_usu-user \
+	havoc_h815_usu-eng \
+	havoc_ls991_usu-userdebug \
+	havoc_ls991_usu-user \
+	havoc_ls991_usu-eng \
+	havoc_us991_usu-userdebug \
+	havoc_us991_usu-user \
+	havoc_us991_usu-eng \
+	havoc_vs986_usu-userdebug \
+	havoc_vs986_usu-user \
+	havoc_vs986_usu-eng
 

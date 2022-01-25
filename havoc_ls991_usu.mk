@@ -14,17 +14,17 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/havoc.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := vs986_usu
-PRODUCT_NAME := lineage_vs986_usu
+PRODUCT_DEVICE := ls991_usu
+PRODUCT_NAME := havoc_ls991_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LGVS986
+PRODUCT_MODEL := LGLS991
 PRODUCT_MANUFACTURER := LGE
 
 CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
@@ -32,9 +32,9 @@ CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_vzw-user 6.0 MRA58K 1714511498b1b release-keys"
+    PRIVATE_BUILD_DESC="p1_spr_us-user 6.0 MRA58K 160741805a3e8 release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_vzw/p1:6.0/MRA58K/1714511498b1b:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_spr_us/p1:6.0/MRA58K/160741805a3e8:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
@@ -44,4 +44,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1
 
-DEBUG_ME += lineage_vs986_usu.mk
+DEBUG_ME += havoc_ls991_usu.mk

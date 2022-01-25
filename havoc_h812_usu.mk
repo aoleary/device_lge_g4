@@ -14,17 +14,17 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/havoc.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := h815_usu
-PRODUCT_NAME := lineage_h815_usu
+PRODUCT_DEVICE := h812_usu
+PRODUCT_NAME := havoc_h812_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-H815
+PRODUCT_MODEL := LG-H812
 PRODUCT_MANUFACTURER := LGE
 
 CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
@@ -32,17 +32,17 @@ CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_global_com-user 6.0 MRA58K 152940055675e release-keys"
+    PRIVATE_BUILD_DESC="p1_tls_ca-user 6.0 MRA58K 170861449823d release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_global_com/p1:6.0/MRA58K/152940055675e:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_tls_ca/p1:6.0/MRA58K/170861449823d:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
     rild.libargs=-d /dev/smd0 \
     ril.subscription.types=NV,RUIM \
     ro.telephony.call_ring.multiple=0 \
-    ro.telephony.default_network=12 \
+    ro.telephony.default_network=9 \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1
 
-DEBUG_ME += lineage_h815_usu.mk
+DEBUG_ME += havoc_h812_usu.mk

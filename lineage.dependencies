@@ -1,13 +1,20 @@
 [
   {
-    "repository": "android_device_lge_g4-common",
+    "repository": "LGgFour/android_device_lge_g4-common",
     "target_path": "device/lge/g4-common",
-    "remote": "suicide"
+    "revision":    "lineage-17.1",
+    "remote": "github"
   },
   {
-    "repository":  "proprietary_vendor_lge",
+    "repository":  "LGgFour/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision":    "android-9.0",
-    "remote":      "suicide"
+    "revision":    "lineage-17.1",
+    "remote":      "github"
+  }
+  {
+    "repository":  "LGgFour/kernel_lge_msm8992",
+    "target_path": "kernel/lge/msm8992",
+    "revision":    "lineage-17.1",
+    "remote":      "github"
   }
 ]

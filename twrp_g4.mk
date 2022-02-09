@@ -17,10 +17,11 @@
 # Release name
 PRODUCT_RELEASE_NAME := g4
 
-$(call inherit-product, build/target/product/embedded.mk)
+# $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 PRODUCT_PACKAGES += \
 	charger_res_images \
@@ -29,7 +30,7 @@ PRODUCT_PACKAGES += \
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := g4
-PRODUCT_NAME := omni_g4
+PRODUCT_NAME := twrp_g4
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-H815
 PRODUCT_MANUFACTURER := LGE

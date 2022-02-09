@@ -15,4 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_g4.mk
+    $(LOCAL_DIR)/twrp_g4.mk
+
+COMMON_LUNCH_CHOICES := twrp_g4-eng

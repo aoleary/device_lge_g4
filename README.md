@@ -1,4 +1,4 @@
-## TWRP for LG G4 (ANY model)
+## OFRP for LG G4 (ANY model)
 
 **Decryption** and working **time** requires an *Android version specific* branch of this device tree:
 
@@ -46,7 +46,7 @@ Create `.repo/local_manifests/g4_kernel.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="Suicide-Squirrel/Titan-Kernel-LG-G4" path="kernel/lge/g4" remote="github" revision="refs/heads/oreo-mr1-release_synced" />
+  <project name="Suicide-Squirrel/Titan-Kernel-LG-G4" path="kernel/lge/g4" remote="github" revision="oreo-mr1-release_synced" />
 </manifest>
 ```
 Then run `repo sync -jX kernel/lge/g4` to check it out.

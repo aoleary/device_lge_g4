@@ -58,7 +58,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/soc.0/f9200000.ssusb/f9200000.dwc3/gadget/lun%d/file"
 TW_NO_USB_STORAGE := true
-TW_EXCLUDE_SUPERSU := true
 TW_NEW_ION_HEAP := true
 
 # NTFS (R/W access)
@@ -75,8 +74,7 @@ TW_DEFAULT_BRIGHTNESS := 200
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # when double tap is enabled this has to be set to FALSE otherwise when
 # an usb cable is connected the screen is blank for several minutes
-# TW_SCREEN_BLANK_ON_BOOT := false
-TW_NO_SCREEN_TIMEOUT := true
+TW_SCREEN_BLANK_ON_BOOT := false
 
 # SPECIAL FLAGS
 # ignore a factory reset when using the phone's factory reset screen
@@ -85,8 +83,6 @@ TW_NO_SCREEN_TIMEOUT := true
 # this flag requires to build TWRP in branch 7.1 or later
 # DO NOT SET TO FALSE WHEN YOU DO NOT KNOW WHAT YOU'RE DOING!
 TW_IGNORE_MISC_WIPE_DATA := true
-# do not build / include TWRP app
-TW_EXCLUDE_TWRPAPP := true
 
 # DISABLED: I do not have the time debugging it atm and it can cause 
 # serious issues keeping it half-enabled like that.
@@ -105,10 +101,6 @@ TW_EXCLUDE_TWRPAPP := true
 # https://android.googlesource.com/platform/external/sepolicy/+/marshmallow-release/README
 BOARD_SEPOLICY_DIRS += device/lge/g4/sepolicy
 
-# Builder's *default* for including /data/media (internal storage) in TWRP backups of data partition
-# outcomment for *not* including data/media by default or "true" for including it
-# TW_BACKUP_INCLUDE_DATA_MEDIA := true
-
 # DEBUG (BOTH needed to enable logcat)
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
@@ -121,4 +113,3 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_g4
 TARGET_RECOVERY_DEVICE_MODULES += libinit_g4
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/libinit_g4.cpp
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(OUT_DIR)/system/usr/share/zoneinfo/tzdata

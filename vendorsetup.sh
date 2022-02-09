@@ -77,6 +77,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_ENABLE_APP_MANAGER=1
     export FOX_USE_NANO_EDITOR=1
     export FOX_USE_XZ_UTILS=1
+    export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/aoleary/OrangeFoxR/device/lge/g4/magisk/Magisk-v26.1.zip"
 
 	# Let's see which are our build vars
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

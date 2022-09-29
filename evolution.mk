@@ -37,3 +37,7 @@ $(call inherit-product, vendor/evolution/config/telephony.mk)
 # EvolutionX Specific Flags
 EXTRA_UDFPS_ANIMATIONS := false
 TARGET_USES_PICO_GAPPS := true
+
+# GAPPS Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages

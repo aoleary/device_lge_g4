@@ -14,28 +14,28 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/havoc.mk)
+$(call inherit-product, $(LOCAL_PATH)/aicp.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := h810_usu
-PRODUCT_NAME := havoc_h810_usu
+PRODUCT_DEVICE := h812_usu
+PRODUCT_NAME := aicp_h812_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-H810
+PRODUCT_MODEL := LG-H812
 PRODUCT_MANUFACTURER := LGE
 
 CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Havoc" \
+    BUILD_DISPLAY_ID="AICP" \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_att_us-user 6.0 MRA58K 1617209012672 release-keys"
+    PRIVATE_BUILD_DESC="p1_tls_ca-user 6.0 MRA58K 170861449823d release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_att_us/p1:6.0/MRA58K/1617209012672:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_tls_ca/p1:6.0/MRA58K/170861449823d:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
@@ -46,4 +46,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1
 
-DEBUG_ME += havoc_h810_usu.mk
+DEBUG_ME += aicp_h812_usu.mk

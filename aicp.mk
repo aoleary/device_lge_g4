@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEBUG_ME += havoc.mk
+DEBUG_ME += aicp.mk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)                                                        
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)                                                
@@ -29,7 +29,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common ROM stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Inherit ROM vendor telephony stuff
-$(call inherit-product, vendor/havoc/config/telephony.mk)
+$(call inherit-product, vendor/aicp/config/telephony.mk)

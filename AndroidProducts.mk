@@ -20,42 +20,42 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/havoc_f500_usu.mk \
-	$(LOCAL_DIR)/havoc_h810_usu.mk \
-	$(LOCAL_DIR)/havoc_h811.mk \
-	$(LOCAL_DIR)/havoc_h812_usu.mk \
-	$(LOCAL_DIR)/havoc_h815.mk \
-	$(LOCAL_DIR)/havoc_h815_usu.mk \
-	$(LOCAL_DIR)/havoc_ls991_usu.mk \
-	$(LOCAL_DIR)/havoc_us991_usu.mk \
-	$(LOCAL_DIR)/havoc_vs986_usu.mk
+	$(LOCAL_DIR)/aicp_f500_usu.mk \
+	$(LOCAL_DIR)/aicp_h810_usu.mk \
+	$(LOCAL_DIR)/aicp_h811.mk \
+	$(LOCAL_DIR)/aicp_h812_usu.mk \
+	$(LOCAL_DIR)/aicp_h815.mk \
+	$(LOCAL_DIR)/aicp_h815_usu.mk \
+	$(LOCAL_DIR)/aicp_ls991_usu.mk \
+	$(LOCAL_DIR)/aicp_us991_usu.mk \
+	$(LOCAL_DIR)/aicp_vs986_usu.mk
 
 COMMON_LUNCH_CHOICES := \
-	havoc_f500_usu-userdebug \
-	havoc_f500_usu-user \
-	havoc_f500_usu-eng \
-	havoc_h810_usu-userdebug \
-	havoc_h810_usu-user \
-	havoc_h810_usu-eng \
-	havoc_h811-userdebug \
-	havoc_h811-user \
-	havoc_h811-eng \
-	havoc_h812_usu-userdebug \
-	havoc_h812_usu-user \
-	havoc_h812_usu-eng \
-	havoc_h815-userdebug \
-	havoc_h815-user \
-	havoc_h815-eng \
-	havoc_h815_usu-userdebug \
-	havoc_h815_usu-user \
-	havoc_h815_usu-eng \
-	havoc_ls991_usu-userdebug \
-	havoc_ls991_usu-user \
-	havoc_ls991_usu-eng \
-	havoc_us991_usu-userdebug \
-	havoc_us991_usu-user \
-	havoc_us991_usu-eng \
-	havoc_vs986_usu-userdebug \
-	havoc_vs986_usu-user \
-	havoc_vs986_usu-eng
+	aicp_f500_usu-userdebug \
+	aicp_f500_usu-user \
+	aicp_f500_usu-eng \
+	aicp_h810_usu-userdebug \
+	aicp_h810_usu-user \
+	aicp_h810_usu-eng \
+	aicp_h811-userdebug \
+	aicp_h811-user \
+	aicp_h811-eng \
+	aicp_h812_usu-userdebug \
+	aicp_h812_usu-user \
+	aicp_h812_usu-eng \
+	aicp_h815-userdebug \
+	aicp_h815-user \
+	aicp_h815-eng \
+	aicp_h815_usu-userdebug \
+	aicp_h815_usu-user \
+	aicp_h815_usu-eng \
+	aicp_ls991_usu-userdebug \
+	aicp_ls991_usu-user \
+	aicp_ls991_usu-eng \
+	aicp_us991_usu-userdebug \
+	aicp_us991_usu-user \
+	aicp_us991_usu-eng \
+	aicp_vs986_usu-userdebug \
+	aicp_vs986_usu-user \
+	aicp_vs986_usu-eng
 

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/xtended.mk)
+$(call inherit-product, $(LOCAL_PATH)/corvus.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := ls991_usu
-PRODUCT_NAME := xtended_ls991_usu
+PRODUCT_NAME := corvus_ls991_usu
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LGLS991
 PRODUCT_MANUFACTURER := LGE
@@ -30,7 +30,7 @@ PRODUCT_MANUFACTURER := LGE
 CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Xtended" \
+    BUILD_DISPLAY_ID="Corvus-OS" \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
     PRIVATE_BUILD_DESC="p1_spr_us-user 6.0 MRA58K 160741805a3e8 release-keys"
@@ -45,4 +45,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1
 
-DEBUG_ME += xtended_ls991_usu.mk
+DEBUG_ME += corvus_ls991_usu.mk

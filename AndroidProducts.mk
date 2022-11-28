@@ -20,42 +20,42 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/xtended_f500_usu.mk \
-	$(LOCAL_DIR)/xtended_h810_usu.mk \
-	$(LOCAL_DIR)/xtended_h811.mk \
-	$(LOCAL_DIR)/xtended_h812_usu.mk \
-	$(LOCAL_DIR)/xtended_h815.mk \
-	$(LOCAL_DIR)/xtended_h815_usu.mk \
-	$(LOCAL_DIR)/xtended_ls991_usu.mk \
-	$(LOCAL_DIR)/xtended_us991_usu.mk \
-	$(LOCAL_DIR)/xtended_vs986_usu.mk
+	$(LOCAL_DIR)/corvus_f500_usu.mk \
+	$(LOCAL_DIR)/corvus_h810_usu.mk \
+	$(LOCAL_DIR)/corvus_h811.mk \
+	$(LOCAL_DIR)/corvus_h812_usu.mk \
+	$(LOCAL_DIR)/corvus_h815.mk \
+	$(LOCAL_DIR)/corvus_h815_usu.mk \
+	$(LOCAL_DIR)/corvus_ls991_usu.mk \
+	$(LOCAL_DIR)/corvus_us991_usu.mk \
+	$(LOCAL_DIR)/corvus_vs986_usu.mk
 
 COMMON_LUNCH_CHOICES := \
-	xtended_f500_usu-userdebug \
-	xtended_f500_usu-user \
-	xtended_f500_usu-eng \
-	xtended_h810_usu-userdebug \
-	xtended_h810_usu-user \
-	xtended_h810_usu-eng \
-	xtended_h811-userdebug \
-	xtended_h811-user \
-	xtended_h811-eng \
-	xtended_h812_usu-userdebug \
-	xtended_h812_usu-user \
-	xtended_h812_usu-eng \
-	xtended_h815-userdebug \
-	xtended_h815-user \
-	xtended_h815-eng \
-	xtended_h815_usu-userdebug \
-	xtended_h815_usu-user \
-	xtended_h815_usu-eng \
-	xtended_ls991_usu-userdebug \
-	xtended_ls991_usu-user \
-	xtended_ls991_usu-eng \
-	xtended_us991_usu-userdebug \
-	xtended_us991_usu-user \
-	xtended_us991_usu-eng \
-	xtended_vs986_usu-userdebug \
-	xtended_vs986_usu-user \
-	xtended_vs986_usu-eng
+	corvus_f500_usu-userdebug \
+	corvus_f500_usu-user \
+	corvus_f500_usu-eng \
+	corvus_h810_usu-userdebug \
+	corvus_h810_usu-user \
+	corvus_h810_usu-eng \
+	corvus_h811-userdebug \
+	corvus_h811-user \
+	corvus_h811-eng \
+	corvus_h812_usu-userdebug \
+	corvus_h812_usu-user \
+	corvus_h812_usu-eng \
+	corvus_h815-userdebug \
+	corvus_h815-user \
+	corvus_h815-eng \
+	corvus_h815_usu-userdebug \
+	corvus_h815_usu-user \
+	corvus_h815_usu-eng \
+	corvus_ls991_usu-userdebug \
+	corvus_ls991_usu-user \
+	corvus_ls991_usu-eng \
+	corvus_us991_usu-userdebug \
+	corvus_us991_usu-user \
+	corvus_us991_usu-eng \
+	corvus_vs986_usu-userdebug \
+	corvus_vs986_usu-user \
+	corvus_vs986_usu-eng
 

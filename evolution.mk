@@ -33,3 +33,7 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Inherit ROM vendor telephony stuff
 $(call inherit-product, vendor/evolution/config/telephony.mk)
+
+# EvolutionX Specific Flags
+EXTRA_UDFPS_ANIMATIONS := false
+TARGET_USES_PICO_GAPPS := true

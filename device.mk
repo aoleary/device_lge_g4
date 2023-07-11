@@ -27,6 +27,9 @@ ifneq ($(filter %ls991_usu %h810_usu %h811 %h812_usu %us991_usu %vs986_usu,$(TAR
     DEBUG_ME += blob2
 endif
 
+# Enable extendrom
+$(call inherit-product, vendor/extendrom/config/common.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

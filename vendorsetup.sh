@@ -3,6 +3,9 @@ export USE_NINJA=true
 export LLVM_ENABLE_THREADS=1
 
 ######### Remove built-in repos #########
+#Also delete info from manifest as there are stricter checks on manifest
+#entries otherwise build will fail as ROM will look for local libbt folder
+sed -i '/libbt/d' .repo/manifests/default.xml
 rm -rf hardware/broadcom/libbt
 rm -rf system/qcom
 ######### Remove built-in repos #########

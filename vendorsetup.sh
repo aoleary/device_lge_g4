@@ -18,8 +18,8 @@ export EXTENDROM_DEBUG_PATH_SIZE_FULL=200
 export EXTENDROM_DEBUG_PATH_SIZE_KERNEL=100
 
 #Magisk preroot
-EXTENDROM_PREROOT_BOOT=true
-EXTENDROM_PACKAGES=Magisk
+export EXTENDROM_PREROOT_BOOT=true
+export EXTENDROM_PACKAGES=Magisk
 
 #clone extendedrom if it doesnt exist
 if [ ! -d "vendor/extendrom" ]

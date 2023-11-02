@@ -14,12 +14,6 @@ rm -rf system/qcom
 # Enable extendrom
 export ENABLE_EXTENDROM=true
 
-#Boot Debug
-export EXTENDROM_BOOT_DEBUG=true
-export EXTENDROM_DEBUG_PATH=/persist
-export EXTENDROM_DEBUG_PATH_SIZE_FULL=200
-export EXTENDROM_DEBUG_PATH_SIZE_KERNEL=100
-
 #Magisk preroot
 export EXTENDROM_PREROOT_BOOT=true
 export EXTENDROM_PACKAGES=Magisk

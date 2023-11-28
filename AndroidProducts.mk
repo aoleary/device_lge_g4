@@ -20,42 +20,42 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/aicp_f500_usu.mk \
-	$(LOCAL_DIR)/aicp_h810_usu.mk \
-	$(LOCAL_DIR)/aicp_h811.mk \
-	$(LOCAL_DIR)/aicp_h812_usu.mk \
-	$(LOCAL_DIR)/aicp_h815.mk \
-	$(LOCAL_DIR)/aicp_h815_usu.mk \
-	$(LOCAL_DIR)/aicp_ls991_usu.mk \
-	$(LOCAL_DIR)/aicp_us991_usu.mk \
-	$(LOCAL_DIR)/aicp_vs986_usu.mk
+	$(LOCAL_DIR)/evolution_f500_usu.mk \
+	$(LOCAL_DIR)/evolution_h810_usu.mk \
+	$(LOCAL_DIR)/evolution_h811.mk \
+	$(LOCAL_DIR)/evolution_h812_usu.mk \
+	$(LOCAL_DIR)/evolution_h815.mk \
+	$(LOCAL_DIR)/evolution_h815_usu.mk \
+	$(LOCAL_DIR)/evolution_ls991_usu.mk \
+	$(LOCAL_DIR)/evolution_us991_usu.mk \
+	$(LOCAL_DIR)/evolution_vs986_usu.mk
 
 COMMON_LUNCH_CHOICES := \
-	aicp_f500_usu-userdebug \
-	aicp_f500_usu-user \
-	aicp_f500_usu-eng \
-	aicp_h810_usu-userdebug \
-	aicp_h810_usu-user \
-	aicp_h810_usu-eng \
-	aicp_h811-userdebug \
-	aicp_h811-user \
-	aicp_h811-eng \
-	aicp_h812_usu-userdebug \
-	aicp_h812_usu-user \
-	aicp_h812_usu-eng \
-	aicp_h815-userdebug \
-	aicp_h815-user \
-	aicp_h815-eng \
-	aicp_h815_usu-userdebug \
-	aicp_h815_usu-user \
-	aicp_h815_usu-eng \
-	aicp_ls991_usu-userdebug \
-	aicp_ls991_usu-user \
-	aicp_ls991_usu-eng \
-	aicp_us991_usu-userdebug \
-	aicp_us991_usu-user \
-	aicp_us991_usu-eng \
-	aicp_vs986_usu-userdebug \
-	aicp_vs986_usu-user \
-	aicp_vs986_usu-eng
+	evolution_f500_usu-userdebug \
+	evolution_f500_usu-user \
+	evolution_f500_usu-eng \
+	evolution_h810_usu-userdebug \
+	evolution_h810_usu-user \
+	evolution_h810_usu-eng \
+	evolution_h811-userdebug \
+	evolution_h811-user \
+	evolution_h811-eng \
+	evolution_h812_usu-userdebug \
+	evolution_h812_usu-user \
+	evolution_h812_usu-eng \
+	evolution_h815-userdebug \
+	evolution_h815-user \
+	evolution_h815-eng \
+	evolution_h815_usu-userdebug \
+	evolution_h815_usu-user \
+	evolution_h815_usu-eng \
+	evolution_ls991_usu-userdebug \
+	evolution_ls991_usu-user \
+	evolution_ls991_usu-eng \
+	evolution_us991_usu-userdebug \
+	evolution_us991_usu-user \
+	evolution_us991_usu-eng \
+	evolution_vs986_usu-userdebug \
+	evolution_vs986_usu-user \
+	evolution_vs986_usu-eng
 

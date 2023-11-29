@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/rr.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := vs986_usu
-PRODUCT_NAME := lineage_vs986_usu
+PRODUCT_NAME := rr_vs986_usu
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LGVS986
 PRODUCT_MANUFACTURER := LGE
@@ -44,4 +44,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1
 
-DEBUG_ME += lineage_vs986_usu.mk
+DEBUG_ME += rr_vs986_usu.mk

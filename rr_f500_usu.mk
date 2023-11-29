@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/rr.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := f500_usu
-PRODUCT_NAME := lineage_f500_usu
+PRODUCT_NAME := rr_f500_usu
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-F500
 PRODUCT_MANUFACTURER := LGE
@@ -45,4 +45,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1
 
-DEBUG_ME += lineage_f500_usu.mk
+DEBUG_ME += rr_f500_usu.mk

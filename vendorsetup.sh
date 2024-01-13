@@ -8,6 +8,8 @@ export LLVM_ENABLE_THREADS=1
 sed -i '/libbt/d' .repo/manifests/default.xml
 rm -rf hardware/broadcom/libbt
 rm -rf system/qcom
+# Delete Launcher3 as we add Lawnchair instead
+rm -rf packages/apps/Launcher3
 ######### Remove built-in repos #########
 
 ########### extendrom section ###########
@@ -22,7 +24,7 @@ export EXTENDROM_DEBUG_PATH_SIZE_KERNEL=100
 
 #Magisk preroot
 export EXTENDROM_PREROOT_BOOT=true
-export EXTENDROM_PACKAGES=Magisk
+export EXTENDROM_PACKAGES="Magisk Lawnchair-stable"
 
 #clone extendedrom if it doesnt exist
 if [ ! -d "vendor/extendrom" ]

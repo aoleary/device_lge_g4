@@ -22,7 +22,7 @@ export EXTENDROM_DEBUG_PATH_SIZE_KERNEL=100
 
 #Magisk preroot
 export EXTENDROM_PREROOT_BOOT=true
-export EXTENDROM_PACKAGES=Magisk
+export EXTENDROM_PACKAGES="Magisk Lawnchair-stable"
 
 #clone extendedrom if it doesnt exist
 if [ ! -d "vendor/extendrom" ]

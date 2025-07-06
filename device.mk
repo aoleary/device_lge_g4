@@ -30,22 +30,9 @@ endif
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-ifneq ($(filter %f500_usu %h815 %h815_usu %h818_usu %h819_usu, $(TARGET_PRODUCT)),)
-# Init configuration
-PRODUCT_PACKAGES += \
-    fstab.g4 \
-    init.device.rc
-
-PRODUCT_PACKAGES_ENG += \
-    fstab.g4 \
-    init.device.rc
-
-DEBUG_ME += fstab
-endif
-
 # Gps
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+    $(LOCAL_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
 PRODUCT_PACKAGES += \
     telephony-ext \

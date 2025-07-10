@@ -23,4 +23,4 @@ TARGET_OTA_ASSERT_DEVICE := g4,p1,h815
 PRODUCT_SOONG_NAMESPACES += device/lge/g4
 
 # inherit from the proprietary version
--include vendor/lge/h815/BoardConfigVendor.mk
+-include vendor/lge/g4/BoardConfigVendor.mk

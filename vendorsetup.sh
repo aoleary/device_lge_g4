@@ -59,8 +59,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_RESET_SETTINGS=0
     export FOX_DELETE_AROMAFM=1
     export OF_USE_GREEN_LED=1
-    export FOX_VERSION=R11.1_2
-    export OF_MAINTAINER=masemoel
+    export OF_MAINTAINER=aoleary
+    export FOX_MAINTAINER_PATCH_VERSION="0"
     export FOX_BUILD_TYPE="Beta"
     export OF_ALLOW_DISABLE_NAVBAR=0
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1420041600"

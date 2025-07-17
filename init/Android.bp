@@ -1,0 +1,16 @@
+cc_library_static {
+    name: "libinit_g4",
+    srcs: ["libinit_g4.cpp"],
+    recovery_available: true,
+    static_libs: ["libbase"],
+
+    cflags: [
+        "-Wall",
+    ],
+
+    include_dirs: [
+        "system/core/init",
+        "external/selinux/libselinux/include",
+    ],
+}
+

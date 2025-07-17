@@ -49,3 +49,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/g4/adbd:recovery/root/sbin/adbd_o
 
+#libinit
+PRODUCT_PACKAGES += \
+        libinit_g4

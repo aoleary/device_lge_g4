@@ -113,4 +113,6 @@ TW_USE_TOOLBOX := true
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_g4
 TARGET_RECOVERY_DEVICE_MODULES += libinit_g4
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/libinit_g4.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/libinit_g4.cpp
+SOONG_CONFIG_custom_target_init_vendor_lib := libinit_g4
+SOONG_CONFIG_custom_is_sdk_gt_25 := true  # Only if SDK > 25

@@ -49,3 +49,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/g4/adbd:recovery/root/sbin/adbd_o
 
+# disable nano
+TW_INCLUDE_NANO := false

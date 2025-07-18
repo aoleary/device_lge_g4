@@ -16,6 +16,9 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := g4
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
 
 # $(call inherit-product, build/target/product/embedded.mk)
 

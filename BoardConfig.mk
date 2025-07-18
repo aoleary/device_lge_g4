@@ -128,6 +128,7 @@ BOARD_SEPOLICY_DIRS += device/lge/g4/sepolicy
 # DEBUG (BOTH needed to enable logcat)
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TW_INCLUDE_FASTBOOTD := true
 
 # Use toybox as busybox failing to build
 TW_USE_TOOLBOX := true

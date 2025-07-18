@@ -62,3 +62,8 @@ TW_INCLUDE_NANO := false
 # fix rsync error
 PRODUCT_PACKAGES += \
         cleanup_recovery_vendor_dir
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl-mock \
+    fastbootd

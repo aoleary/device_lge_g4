@@ -52,3 +52,6 @@ PRODUCT_COPY_FILES += \
 #libinit
 PRODUCT_PACKAGES += \
         libinit_g4
+
+# disable nano
+TW_INCLUDE_NANO := false

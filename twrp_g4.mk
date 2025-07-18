@@ -55,3 +55,7 @@ PRODUCT_PACKAGES += \
 
 # disable nano
 TW_INCLUDE_NANO := false
+
+# fix rsync error
+PRODUCT_PACKAGES += \
+        cleanup_recovery_vendor_dir

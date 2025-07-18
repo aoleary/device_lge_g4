@@ -117,3 +117,7 @@ TARGET_RECOVERY_DEVICE_MODULES += libinit_g4
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/libinit_g4.cpp
 SOONG_CONFIG_custom_target_init_vendor_lib := libinit_g4
 SOONG_CONFIG_custom_is_sdk_gt_25 := true  # Only if SDK > 25
+
+# fix rsync symlink error
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false

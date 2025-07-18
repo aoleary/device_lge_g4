@@ -16,6 +16,9 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := g4
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
 
 # $(call inherit-product, build/target/product/embedded.mk)
 
@@ -59,3 +62,8 @@ TW_INCLUDE_NANO := false
 # fix rsync error
 PRODUCT_PACKAGES += \
         cleanup_recovery_vendor_dir
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl-mock \
+    fastbootd

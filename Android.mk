@@ -23,7 +23,8 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-ifneq ($(filter g4,$(TARGET_DEVICE)),)
+# Match both g4 and h815 as valid device names
+ifneq ($(filter g4 h815,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 

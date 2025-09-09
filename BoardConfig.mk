@@ -130,3 +130,9 @@ SOONG_CONFIG_custom_is_sdk_gt_25 := true  # Only if SDK > 25
 # fix rsync symlink error
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+
+# Make sure updater asserts don’t fail
+TARGET_OTA_ASSERT_DEVICE := g4,h815,f500,h810,h811,h812,h819,ls991,us991,vs896
+
+# Help OrangeFox override weird props
+TW_OVERRIDE_SYSTEM_PROPS := "ro.product.device;ro.build.product;ro.product.name;ro.product.vendor.device"

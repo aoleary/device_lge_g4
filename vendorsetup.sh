@@ -39,9 +39,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export LC_ALL="C"
     export TARGET_ARCH=arm64
     export FOX_REPLACE_TOOLBOX_GETPROP=1
-    export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/soc.0/f9824900.sdhci/by-name/recovery"
-    export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/soc.0/f9824900.sdhci/by-name/system"
-    export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot"
+    export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/bootdevice/by-name/recovery"
+    export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/bootdevice/by-name/system"
+    export FOX_RECOVERY_BOOT_PARTITION="/dev/block/bootdevice/by-name/boot"
     export FOX_USE_BASH_SHELL=1
     export FOX_USE_SED_BINARY=1
     export FOX_USE_TAR_BINARY=1
@@ -64,7 +64,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_BUILD_TYPE="Beta"
     export OF_ALLOW_DISABLE_NAVBAR=0
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1420041600"
-    export TARGET_DEVICE_ALT=g4,p1,f500,f500_usu,h810,h810_usu,h811,h812,h812_usu,h815,h819,h815_usu,ls991,ls991_usu,us991,us991_usu,vs896,vs896_usu
+    export TARGET_DEVICE_ALT="g4,p1,f500,f500_usu,h810,h810_usu,h811,h812,h812_usu,h815,h819,h815_usu,ls991,ls991_usu,us991,us991_usu,vs896,vs896_usu"
     export OF_SKIP_ORANGEFOX_PROCESS=1
     export FOX_VANILLA_BUILD=1
     export OF_CHECK_OVERWRITE_ATTEMPTS=1
@@ -78,6 +78,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_USE_NANO_EDITOR=1
     export FOX_USE_XZ_UTILS=1
     export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/aoleary/OrangeFoxR/device/lge/g4/magisk/Magisk-v26.1.zip"
+    export TW_OVERRIDE_SYSTEM_PROPS="ro.product.device;ro.build.product;ro.product.name;ro.product.vendor.device"
 
 	# Let's see which are our build vars
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

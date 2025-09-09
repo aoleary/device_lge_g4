@@ -1,33 +1,51 @@
-/boot           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/boot       flags=backup=1
-/recovery       emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/recovery   flags=backup=1
-/system         ext4    /dev/block/platform/soc.0/f9824900.sdhci/by-name/system     flags=backup=1
-/cache          ext4    /dev/block/platform/soc.0/f9824900.sdhci/by-name/cache
-/data           ext4    /dev/block/platform/soc.0/f9824900.sdhci/by-name/userdata   flags=encryptable=/dev/block/platform/soc.0/f9824900.sdhci/by-name/encrypt
-/encrypt        emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/encrypt    flags=backup=1;display="Encryption metadata";removable
-/encryptwipe    vfat    /dev/block/platform/soc.0/f9824900.sdhci/by-name/encrypt    flags=backup=0;display="Encryption metadata";wipeduringfactoryreset;wipeingui;removable
-/firmware       vfat    /dev/block/platform/soc.0/f9824900.sdhci/by-name/modem      flags=backup=0;display="Firmware";mounttodecrypt
-/persist-lg     ext4    /dev/block/platform/soc.0/f9824900.sdhci/by-name/drm        flags=backup=0;mounttodecrypt
-/firmware_image emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/modem      flags=backup=1;display="Firmware_Image"
-/factory        emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/factory    flags=backup=1;subpartitionof=/firmware_image
-/efs1           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/modemst1   flags=backup=1;display="EFS"
-/efs2           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/modemst2   flags=backup=1;subpartitionof=/efs1
-/efs3           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/fsg        flags=backup=1;subpartitionof=/efs1
-/external_sd    auto    /dev/block/mmcblk1p1 /dev/block/mmcblk1                     flags=display="Micro SD card";storage;wipeingui;removable;encryptable=/dev/block/platform/soc.0/f9824900.sdhci/by-name/encrypt
-/usb-otg        auto    /dev/block/sda1 /dev/block/sda                              flags=display="USB-OTG";storage;wipeingui;removable
-/misc           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/grow       flags=backup=0;
-/misc_real      emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/misc       flags=backup=1;display="BL unlock state"
-/devinfo        emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/devinfo    flags=backup=1;subpartitionof=/misc_real
-/persist        emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/persist    flags=backup=1;subpartitionof=/misc_real
-/persistent     emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent flags=backup=1;subpartitionof=/misc_real
-/drm            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/drm        flags=backup=1;subpartitionof=/misc_real
-/sns            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/sns        flags=backup=1;subpartitionof=/misc_real
-/bl             emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/aboot      flags=backup=1;display="Bootloader"
-/bl2            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/rpm        flags=backup=1;subpartitionof=/bl
-/bl3            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/pmic       flags=backup=1;subpartitionof=/bl
-/bl4            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/sdi        flags=backup=1;subpartitionof=/bl
-/bl5            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/laf        flags=backup=1;subpartitionof=/bl
-/bl6            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/tz         flags=backup=1;subpartitionof=/bl
-/bl7            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/hyp        flags=backup=1;subpartitionof=/bl
-/bl8            emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/sbl1       flags=backup=1;subpartitionof=/bl
-/carrier        emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/carrier    flags=backup=1;display="Carrier"
-/cust           emmc    /dev/block/platform/soc.0/f9824900.sdhci/by-name/cust       flags=backup=1;display="Cust"
+/boot           emmc    /dev/block/bootdevice/by-name/boot        flags=backup=1
+/recovery       emmc    /dev/block/bootdevice/by-name/recovery    flags=backup=1
+
+/system         ext4    /dev/block/bootdevice/by-name/system      flags=backup=1
+/cache          ext4    /dev/block/bootdevice/by-name/cache
+/data           ext4    /dev/block/bootdevice/by-name/userdata    flags=encryptable=/dev/block/bootdevice/by-name/encrypt
+
+/encrypt        emmc    /dev/block/bootdevice/by-name/encrypt     flags=backup=1;display="Encryption metadata";removable
+/encryptwipe    vfat    /dev/block/bootdevice/by-name/encrypt     flags=backup=0;display="Encryption metadata";wipeduringfactoryreset;wipeingui;removable
+
+/firmware       vfat    /dev/block/bootdevice/by-name/modem       flags=backup=0;display="Firmware";mounttodecrypt
+/persist-lg     ext4    /dev/block/bootdevice/by-name/drm         flags=backup=0;mounttodecrypt
+
+/firmware_image emmc    /dev/block/bootdevice/by-name/modem       flags=backup=1;display="Firmware_Image"
+# Sub-partitions of firmware image
+/factory        emmc    /dev/block/bootdevice/by-name/factory     flags=backup=1;subpartitionof=/firmware_image
+
+# EFS-related
+/efs1           emmc    /dev/block/bootdevice/by-name/modemst1    flags=backup=1;display="EFS"
+/efs2           emmc    /dev/block/bootdevice/by-name/modemst2    flags=backup=1;subpartitionof=/efs1
+/efs3           emmc    /dev/block/bootdevice/by-name/fsg         flags=backup=1;subpartitionof=/efs1
+
+# External storage
+/external_sd    auto    /dev/block/mmcblk1p1 /dev/block/mmcblk1   flags=display="Micro SD card";storage;wipeingui;removable;encryptable=/dev/block/bootdevice/by-name/encrypt
+/usb-otg        auto    /dev/block/sda1 /dev/block/sda            flags=display="USB-OTG";storage;wipeingui;removable
+
+# MISC and related
+/misc           emmc    /dev/block/bootdevice/by-name/misc        flags=backup=0
+/misc_real      emmc    /dev/block/bootdevice/by-name/misc        flags=backup=1;display="BL unlock state"
+# If you truly need 'grow' separately, keep it as its own entry:
+/grow           emmc    /dev/block/bootdevice/by-name/grow        flags=backup=0
+
+/devinfo        emmc    /dev/block/bootdevice/by-name/devinfo     flags=backup=1;subpartitionof=/misc_real
+/persist        emmc    /dev/block/bootdevice/by-name/persist     flags=backup=1;subpartitionof=/misc_real
+/persistent     emmc    /dev/block/bootdevice/by-name/persistent  flags=backup=1;subpartitionof=/misc_real
+/drm            emmc    /dev/block/bootdevice/by-name/drm         flags=backup=1;subpartitionof=/misc_real
+/sns            emmc    /dev/block/bootdevice/by-name/sns         flags=backup=1;subpartitionof=/misc_real
+
+# Bootloader bits
+/bl             emmc    /dev/block/bootdevice/by-name/aboot       flags=backup=1;display="Bootloader"
+/bl2            emmc    /dev/block/bootdevice/by-name/rpm         flags=backup=1;subpartitionof=/bl
+/bl3            emmc    /dev/block/bootdevice/by-name/pmic        flags=backup=1;subpartitionof=/bl
+/bl4            emmc    /dev/block/bootdevice/by-name/sdi         flags=backup=1;subpartitionof=/bl
+/bl5            emmc    /dev/block/bootdevice/by-name/laf         flags=backup=1;subpartitionof=/bl
+/bl6            emmc    /dev/block/bootdevice/by-name/tz          flags=backup=1;subpartitionof=/bl
+/bl7            emmc    /dev/block/bootdevice/by-name/hyp         flags=backup=1;subpartitionof=/bl
+/bl8            emmc    /dev/block/bootdevice/by-name/sbl1        flags=backup=1;subpartitionof=/bl
+
+# Carrier & Cust
+/carrier        emmc    /dev/block/bootdevice/by-name/carrier     flags=backup=1;display="Carrier"
+/cust           emmc    /dev/block/bootdevice/by-name/cust        flags=backup=1;display="Cust"

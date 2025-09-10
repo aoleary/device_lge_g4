@@ -78,6 +78,10 @@ TW_INCLUDE_NTFS_3G := true
 # and TWRP will reset the already fixed time when enabled
 TARGET_RECOVERY_QCOM_RTC_FIX := false
 
+# Screen resolution for recovery UI
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
+
 # GRAPHIC FLAGS
 TW_THEME := portrait_hdpi
 TW_DEFAULT_BRIGHTNESS := 200

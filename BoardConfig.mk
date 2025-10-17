@@ -140,3 +140,15 @@ TARGET_OTA_ASSERT_DEVICE := g4,h815,f500,h810,h811,h812,h819,ls991,us991,vs896
 
 # Help OrangeFox override weird props
 TW_OVERRIDE_SYSTEM_PROPS := "ro.product.device;ro.build.product;ro.product.name;ro.product.vendor.device"
+
+# Fix error 255
+# --- OrangeFox compatibility: force 32-bit recovery environment ---
+RECOVERY_32BIT := true
+
+# --- Recovery feature flags ---
+TW_INCLUDE_ZSTD := true              # unzip support for zstd/lz4
+TW_USE_LEGACY_BLOB_UPDATER := true   # legacy /tmp/updater execution path
+TW_USE_TOOLBOX := true               # use toybox/toolbox for POSIX utils
+
+# --- Ensure recovery binary is packaged ---
+TARGET_RECOVERY_DEVICE_MODULES += recovery recovery-persist

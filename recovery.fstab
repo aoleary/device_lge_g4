@@ -1,3 +1,4 @@
+/tmp            tmpfs   tmpfs                                     flags=backup=0
 /boot           emmc    /dev/block/bootdevice/by-name/boot        flags=backup=1
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery    flags=backup=1
 

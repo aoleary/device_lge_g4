@@ -1,0 +1,17 @@
+// Override only the install behavior of the existing recovery binary.
+package {
+    default_visibility: ["//visibility:public"],
+}
+
+cc_binary {
+    name: "recovery_32bit",
+    defaults: ["recovery_defaults"],
+    compile_multilib: "32",
+    installable: true,
+    relative_install_path: "sbin",
+    symlinks: ["recovery", "twrp", "orangefox"],
+    // The 'recovery_defaults' already pulls in all the recovery sources
+    // through the main recovery module; this is just a wrapper.
+    // So we reuse the main object by depending on it:
+    static_libs: ["librecovery"],
+}

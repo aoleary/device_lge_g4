@@ -59,3 +59,15 @@ TW_INCLUDE_NANO := false
 # fix rsync error
 PRODUCT_PACKAGES += \
         cleanup_recovery_vendor_dir
+
+# --- Manually force 32-bit recovery ---
+PRODUCT_PROPERTY_OVERRIDES += ro.recovery.arch=32
+RECOVERY_32BIT := true
+TARGET_RECOVERY_ARCH := arm
+TARGET_RECOVERY_CPU_ABI := armeabi-v7a
+TARGET_RECOVERY_CPU_ABI2 := armeabi
+TARGET_RECOVERY_ARCH_VARIANT := armv7-a-neon
+TARGET_RECOVERY_CPU_VARIANT := generic
+
+# Ensure recovery binary(s) are included into the recovery ramdisk
+PRODUCT_PACKAGES += recovery_32bit recovery-persist persist_system_bin_sh

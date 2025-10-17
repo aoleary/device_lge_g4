@@ -30,4 +30,17 @@ LOCAL_PATH := $(call my-dir)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+# ---------------------------------------------------------------------------
+# Ensure /system/bin/sh symlink persists after OrangeFox ramdisk repack
+# ---------------------------------------------------------------------------
+include $(CLEAR_VARS)
+LOCAL_MODULE := persist_system_bin_sh
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/system/bin
+LOCAL_POST_INSTALL_CMD := \
+    rm -f $(TARGET_RECOVERY_ROOT_OUT)/system/bin/sh; \
+    ln -sf /sbin/sh $(TARGET_RECOVERY_ROOT_OUT)/system/bin/sh
+include $(BUILD_PHONY_PACKAGE)
+
 endif

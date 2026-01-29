@@ -15,7 +15,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/lge/g4-common',
-    'hardware/qcom-caf/msm8994',
+    'hardware/qcom-caf/msm8992',
     'vendor/lge/g4-common',
 ]
 

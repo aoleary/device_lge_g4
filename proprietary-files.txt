@@ -1,11 +1,12 @@
-system/etc/acdbdata/Bluetooth_cal.acdb:vendor/etc/acdbdata/Bluetooth_cal.acdb
-system/etc/acdbdata/General_cal.acdb:vendor/etc/acdbdata/General_cal.acdb
-system/etc/acdbdata/Global_cal.acdb:vendor/etc/acdbdata/Global_cal.acdb
-system/etc/acdbdata/Handset_cal.acdb:vendor/etc/acdbdata/Handset_cal.acdb
-system/etc/acdbdata/Hdmi_cal.acdb:vendor/etc/acdbdata/Hdmi_cal.acdb
-system/etc/acdbdata/Headset_cal.acdb:vendor/etc/acdbdata/Headset_cal.acdb
-system/etc/acdbdata/Speaker_cal.acdb:vendor/etc/acdbdata/Speaker_cal.acdb
-system/etc/acdbdata/workspaceFile.qwsp:vendor/etc/acdbdata/workspaceFile.qwsp
+
+system/etc/acdbdata/Bluetooth_cal.acdb:vendor/etc/Bluetooth_cal.acdb
+system/etc/acdbdata/General_cal.acdb:vendor/etc/General_cal.acdb
+system/etc/acdbdata/Global_cal.acdb:vendor/etc/Global_cal.acdb
+system/etc/acdbdata/Handset_cal.acdb:vendor/etc/Handset_cal.acdb
+system/etc/acdbdata/Hdmi_cal.acdb:vendor/etc/Hdmi_cal.acdb
+system/etc/acdbdata/Headset_cal.acdb:vendor/etc/Headset_cal.acdb
+system/etc/acdbdata/Speaker_cal.acdb:vendor/etc/Speaker_cal.acdb
+system/etc/acdbdata/workspaceFile.qwsp:vendor/etc/workspaceFile.qwsp
 vendor/firmware/fw_bcmdhd.bin
 vendor/firmware/fw_bcmdhd_apsta.bin
 vendor/firmware/fw_bcmdhd_mfg.bin
@@ -16,5 +17,3 @@ system/etc/firmware/venus.b03:vendor/firmware/venus.b03
 system/etc/firmware/venus.b04:vendor/firmware/venus.b04
 system/etc/firmware/venus.mbn:vendor/firmware/venus.mbn
 system/etc/firmware/venus.mdt:vendor/firmware/venus.mdt
-vendor/lib/libacdbloader.so
-vendor/lib64/libacdbloader.so

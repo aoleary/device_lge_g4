@@ -31,6 +31,14 @@
 
 #include "libinit_g4.h"
 
+namespace android {
+namespace init {
+static inline void property_set(const char* key, const char* value) {
+    android::base::SetProperty(key, value);
+}
+}  // namespace init
+}  // namespace android
+
 char product_model[PROP_VALUE_MAX];
 char usu_detect[PROP_VALUE_MAX];
 const char* detected_usudev;
@@ -263,12 +271,6 @@ void real_vendor_load_properties()
 // Call the appropriate real_vendor_load_properties() depending on android version
 #undef vendor_load_properties
 
-// Android 8.1 has to use namespace android::init
-namespace android {
-namespace init {
         void vendor_load_properties() { 
 		real_vendor_load_properties();
 	}
-}  // namespace init
-}  // namespace android
- 

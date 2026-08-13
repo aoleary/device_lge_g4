@@ -31,10 +31,10 @@ CLEAN_MODEL := $(PRODUCT_DEVICE)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
-    PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_global_com-user 6.0 MRA58K 152940055675e release-keys"
+    PRODUCT_NAME="h815_global_com" \
+    PRIVATE_BUILD_DESC="h815_global_com-user 7.0 NRD90U H81520p release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_global_com/p1:6.0/MRA58K/152940055675e:user/release-keys"
+BUILD_FINGERPRINT := "lge/h815_global_com/h815:7.0/NRD90U/H81520p:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
